@@ -41,12 +41,15 @@ public class Anggota {
     }
 
     public int angsur(int jumlah) {
+        int minimalAngsuran = (int) (0.1 * jumlahPinjaman);
         if (jumlah <= 0) {
             System.out.println("Jumlah angsuran harus lebih dari nol");
         } else if (jumlahPinjaman == 0) {
             System.out.println("Tidak ada hutang yang perlu diangsur");
         } else if (jumlah > jumlahPinjaman) {
             System.out.println("Angsurang melebihi sisa hutang");
+        } else if (jumlah < minimalAngsuran) {
+            System.out.println("Maaf, angsuran harus 10% dari jumlah pinjaman");
         } else {
             jumlahPinjaman -= jumlah;
             limitPinjaman += jumlah;
