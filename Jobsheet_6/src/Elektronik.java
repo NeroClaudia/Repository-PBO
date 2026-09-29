@@ -6,6 +6,7 @@ public class Elektronik extends Produk {
         this.masaGaransiBulan = 0;
     }
 
+    // Overloading
     public Elektronik(String kodeProduk, String namaProduk, double harga, int masaGaransiBulan) {
         super(kodeProduk, namaProduk, harga);
         this.masaGaransiBulan = masaGaransiBulan;
@@ -19,9 +20,11 @@ public class Elektronik extends Produk {
         this.masaGaransiBulan = masaGaransiBulan;
     }
 
-    public void infoElektronik() {
+    // Overriding
+    @Override
+    public void infoProduk() {
         System.out.println("=== Detail Produk Elektronik ===");
-        infoProduk();
-        System.out.println("Masa Garansi: " + this.masaGaransiBulan + " Bulan");
+        super.infoProduk();
+        System.out.println("Masa Garansi: " + masaGaransiBulan + " Bulan");
     }
 }

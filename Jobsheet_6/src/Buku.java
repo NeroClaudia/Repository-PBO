@@ -6,6 +6,7 @@ public class Buku extends Produk {
         this.penulis = "Penulis Anonim";
     }
 
+    // Overloading
     public Buku(String kodeProduk, String namaProduk, double harga, String penulis) {
         super(kodeProduk, namaProduk, harga);
         this.penulis = penulis;
@@ -19,9 +20,11 @@ public class Buku extends Produk {
         this.penulis = penulis;
     }
 
-    public void infoBuku() {
+    // Overriding
+    @Override
+    public void infoProduk() {
         System.out.println("=== Detail Produk Buku ===");
-        infoProduk();
+        super.infoProduk();
         System.out.println("Penulis: " + penulis);
     }
 }
