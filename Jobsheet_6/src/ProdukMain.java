@@ -15,7 +15,8 @@ public class ProdukMain {
         buku1.setHarga(200000);
         buku1.setPenulis("Friedrich Nietzsche");
 
-        hp1.setHarga(3000000);
+        hp1.setNamaProduk("Iphone 17");
+        hp1.setHarga(30000000);
         hp1.setMasaGaransiBulan(24);
 
         buku1.infoBuku();
